@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .order-form {
+            background-color: #f4f4f4;
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .order-form input,
+        .order-form textarea,
+        .order-form select,
+        .order-form button,
+        .order-form a.home-link {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .order-form input:focus,
+        .order-form textarea:focus,
+        .order-form select:focus,
+        .order-form button:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+
+        .order-form button,
+        .order-form a.home-link {
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .order-form button:hover,
+        .order-form a.home-link:hover {
+            background-color: #0056b3;
+        }
+
+        .order-form button:active,
+        .order-form a.home-link:active {
+            background-color: #004085;
+        }
+
+        .order-form textarea {
+            resize: vertical;
+        }
+
+        .order-form select {
+            cursor: pointer;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            .order-form {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .order-form input,
+            .order-form textarea,
+            .order-form select,
+            .order-form button,
+            .order-form a.home-link {
+                font-size: 0.95rem;
+                padding: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form id="order-form" class="order-form" action="https://formspree.io/f/xblavvqg" method="POST" novalidate>
+
+        <label for="customer-name">Name:</label>
+        <input type="text" id="customer-name" name="customerName" required autocomplete="name" />
+
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" name="productName" required />
+
+        <label for="customer-email">Email:</label>
+        <input type="email" id="customer-email" name="customerEmail" required autocomplete="email" />
+
+        <label for="customer-address">Shipping Address:</label>
+        <textarea id="customer-address" name="customerAddress" rows="3" required></textarea>
+
+        <label for="quantity">Quantity:</label>
+        <select id="quantity" name="quantity" required>
+            <option value="" disabled selected>Select quantity</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+
+        </select>
+
+        <button type="submit" class="submit-btn" style="border-radius: 50px;">Submit Order</button>
+
+        <!-- Back to Home Button -->
+        <a href="bca.html" class="home-link" style="border-radius: 50px;">← Back to Home</a>
+    </form>
+</body>
+
+</html>
